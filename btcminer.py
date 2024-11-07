@@ -8,7 +8,7 @@ def mine_btc(target,difficulty,limit=None):
 			if nonce == limit:
 				return "Limit reached"
 
-		our_hash = sha256(("string" + str(nonce)).encode()).hexdigest()
+		our_hash = sha256(("string" + str(nonce)).encode()).hexdigest() 
 
 		if our_hash.startswith(target[:int(difficulty)]):
 			print("[+] HASH FOUND!")
